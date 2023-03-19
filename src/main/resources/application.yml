@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3300/board?useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: test1234
+  jpa:
+#    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+# Trace < Debug < Info < Error
+# 예를 들어, Error로 설정하면 Error 이하인 Log는 나오지 않음
+# 예를 들어, Debug로 설정하면 Trace는 나오지 않고, Debug 이상만 출력이 됨
+logging:
+  level:
+    root: info
